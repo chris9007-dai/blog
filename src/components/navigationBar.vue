@@ -59,6 +59,7 @@ export default {
             line-height: 50px;
             list-style: none;
             float: left;
+            box-shadow: 2px 2px 2px;
         }
         .cover{
             position: relative;
@@ -68,6 +69,7 @@ export default {
             background-color: orange;
             opacity: 0.5;
             transition: 1s;
-            border-radius: 10px;
+            /* border-radius: 10px; */
+            box-shadow: 2px 2px 2px;
         }
 </style>
