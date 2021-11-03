@@ -25,8 +25,6 @@
   }
 
   .navigation{
-    display: fixed;
-    z-index: 10;
     position: absolute;
     left: 0px;
     top: 0px;

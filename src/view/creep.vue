@@ -1,11 +1,19 @@
 <!--  -->
 <template>
   <div>
-      <div class="first">
+    <div class="first">
+       <div>
           <h2>CREEP</h2>
           <span>/*web srawler for zhihu */</span>
       </div>
-      <i icon="../assets/icon/down.png"></i>
+      <div class="scroll_down">
+        <i class="icon" @click="icon"></i>
+      </div>
+    </div> 
+
+    <div class="seconed">
+
+    </div>
   </div>
 </template>
 
@@ -15,23 +23,32 @@ export default {
     return {
     };
   },
-
+  
   components: {},
 
   computed: {},
 
   mounted: {},
 
-  methods: {}
+  methods: {
+    icon(e){
+      var height = document.querySelector(".first").offsetHeight
+      window.scrollTo(0,height)
+   }
+  }
 }
 
 </script>
 <style lang='less' scoped>
-    .first{
+  .first{
+    position: relative;
+    width:100vw;
+    height:100vh;
+    box-shadow: 1px 1px 1px;
+    div{
         position: absolute;
         top: 384.5px;
         width : 100vw;
-        min-height: 200px;
         margin: 0 auto;
         text-align: center;
         h2{
@@ -41,6 +58,42 @@ export default {
         }
         span{
             display: block;
+            margin-top: 20px;
         }
+    }
+
+    .scroll_down{
+      width: 100vw;
+      height : 5%;
+      position: absolute;
+      top: 95%;
+        .icon{
+          display: inline-block;
+          width: 28px;
+          height:28px;
+          cursor: pointer;
+          background-image: url("../assets/icon/down.png");
+          background-position: center center;
+          animation: shak 1s infinite;
+      }
+    }
+  }
+    @keyframes shak{
+      0%{
+        transform:translateY(0PX) ;
+      }
+      50%{
+        transform: translateY(8PX);
+      }
+      100%{
+        transform: translateY(16px);
+      }
+    }
+
+    
+    .seconed{
+      width: 100vw;
+      height: 100vh;
+
     }
 </style>
