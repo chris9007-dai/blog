@@ -28,5 +28,6 @@
     position: absolute;
     left: 0px;
     top: 0px;
+    z-index:10;
   }
 </style>
